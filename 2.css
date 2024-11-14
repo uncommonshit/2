@@ -23,11 +23,10 @@ body {
 
 nav {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    margin: 0 10px;
-    flex-wrap: wrap;
+    margin: 10px 0;
 }
 
 nav a {
@@ -36,11 +35,11 @@ nav a {
     border-radius: 10px;
     text-decoration: none;
     color: #233040;
-    padding: 5px 15px;
-    transition: transform 0.3s ease;
-    margin: 5px;
+    padding: 8px 20px;
+    margin: 5px 0;
     font-size: 1em;
     font-weight: 500;
+    transition: transform 0.3s ease;
 }
 
 nav a:hover {
@@ -51,25 +50,25 @@ nav a:hover {
 
 .content {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
     margin: 10px 0;
 }
 
 article {
     border: 5px solid black;
     border-radius: 10px;
+    padding: 10px;
     width: 100%;
-    margin-bottom: 10px;
 }
 
 article .header {
     background-color: #5cbade;
     color: #233040;
     font-size: 1.5em;
-    margin: 10px;
     text-align: center;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 article img {
@@ -83,7 +82,7 @@ article .one,
 article .two {
     background-color: #5cbade;
     border: 2px solid black;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 10px;
     color: #233040;
     padding: 10px;
@@ -92,7 +91,7 @@ article .two {
 article footer {
     background-color: #5cbade;
     border: 2px solid black;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 10px;
     color: #233040;
     font-weight: 500;
@@ -107,7 +106,6 @@ aside {
     color: #233040;
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
     text-align: center;
 }
 
@@ -123,8 +121,18 @@ footer {
 }
 
 @media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 5px 10px;
+    }
+
     .content {
-        flex-wrap: nowrap;
+        flex-direction: row;
     }
 
     article {
